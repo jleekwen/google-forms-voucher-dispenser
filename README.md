@@ -1,4 +1,4 @@
-# Google Forms Voucher Redemption Queue
+# Google Forms Voucher Dispenser
 
 A Google Apps Script solution that creates a first-in, first-out (FIFO) queue for voucher redemption using two Google Forms and a Google Sheet.
 
