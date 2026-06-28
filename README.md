@@ -199,7 +199,7 @@ Extensions
 → Apps Script
 ```
 
-Paste the script.
+Paste the contents of VoucherHandler.gs.
 
 ---
 
