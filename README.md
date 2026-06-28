@@ -4,9 +4,9 @@ A Google Apps Script solution that creates a first-in, first-out (FIFO) queue fo
 
 ## Overview
 
-This project manages voucher screenshots submitted through a Google Form. Each submitted card begins with a configurable value (default: **$40**) and is placed into a redemption queue based on submission time.
+This project manages voucher screenshots submitted through a Google Form. Each submitted voucher begins with a configurable value (default: **$40**) and is placed into a redemption queue based on submission time.
 
-A second Google Form always displays the **oldest available voucher**. When a redemption is submitted, the remaining balance is updated. Once a card reaches **$0**, it is automatically removed from the queue and the next oldest card is displayed.
+A second Google Form always displays the **oldest available voucher**. When a redemption is submitted, the remaining balance is updated. Once a voucher reaches **$0**, it is automatically removed from the queue and the next oldest voucher is displayed.
 
 ## Features
 
@@ -14,13 +14,13 @@ A second Google Form always displays the **oldest available voucher**. When a re
 * Automatic timestamping
 * FIFO redemption queue
 * Tracks remaining balance for each voucher
-* Automatically rotates to the next oldest card
+* Automatically rotates to the next oldest voucher
 * Supports full redemption ("All")
 * Displays:
 
   * Current remaining balance
-  * Number of cards remaining after the current card
-* Automatically hides the image when no cards remain
+  * Number of vouchers remaining after the current voucher
+* Automatically hides the image when no vouchers remain
 
 ---
 
@@ -135,8 +135,8 @@ The queue always selects:
 
 When Value Remaining reaches 0:
 
-* Card leaves the queue
-* Next oldest card is displayed automatically
+* Voucher leaves the queue
+* Next oldest voucher is displayed automatically
 
 ---
 
@@ -277,11 +277,11 @@ This acts as a backup refresh.
 
 1. User uploads a voucher.
 2. Script initializes remaining value to `$40`.
-3. Form 2 updates to display the oldest available card.
-4. User redeems part or all of the card.
+3. Form 2 updates to display the oldest available voucher.
+4. User redeems part or all of the voucher.
 5. Remaining value is updated.
-6. When value reaches `$0`, the next oldest card becomes active.
-7. If no cards remain, Form 2 removes the image.
+6. When value reaches `$0`, the next oldest voucher becomes active.
+7. If no vouchers remain, Form 2 removes the image.
 
 ---
 
@@ -301,7 +301,7 @@ This acts as a backup refresh.
 * Admin dashboard
 * Audit history
 * Email or Slack notifications
-* Automatic archival of fully redeemed cards
+* Automatic archival of fully redeemed vouchers
 * Support for multiple redemption queues
 
 ---
