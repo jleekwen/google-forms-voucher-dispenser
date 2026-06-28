@@ -18,8 +18,9 @@ A second Google Form always displays the **oldest available voucher**. When a re
 * Supports full redemption ("All")
 * Displays:
 
-  * Current remaining balance
-  * Number of vouchers remaining after the current voucher
+ * Current voucher image
+ * Current remaining balance
+ * Number of vouchers remaining in the queue after the current voucher
 * Automatically hides the image when no vouchers remain
 
 ---
