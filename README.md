@@ -1,19 +1,19 @@
-# Google Forms Gift Card Redemption Queue
+# Google Forms Voucher Redemption Queue
 
-A Google Apps Script solution that creates a first-in, first-out (FIFO) queue for gift card redemption using two Google Forms and a Google Sheet.
+A Google Apps Script solution that creates a first-in, first-out (FIFO) queue for voucher redemption using two Google Forms and a Google Sheet.
 
 ## Overview
 
-This project manages gift card screenshots submitted through a Google Form. Each submitted card begins with a configurable value (default: **$40**) and is placed into a redemption queue based on submission time.
+This project manages voucher screenshots submitted through a Google Form. Each submitted card begins with a configurable value (default: **$40**) and is placed into a redemption queue based on submission time.
 
-A second Google Form always displays the **oldest available gift card**. When a redemption is submitted, the remaining balance is updated. Once a card reaches **$0**, it is automatically removed from the queue and the next oldest card is displayed.
+A second Google Form always displays the **oldest available voucher**. When a redemption is submitted, the remaining balance is updated. Once a card reaches **$0**, it is automatically removed from the queue and the next oldest card is displayed.
 
 ## Features
 
-* Upload gift card screenshots through Google Forms
+* Upload voucher screenshots through Google Forms
 * Automatic timestamping
 * FIFO redemption queue
-* Tracks remaining balance for each gift card
+* Tracks remaining balance for each voucher
 * Automatically rotates to the next oldest card
 * Supports full redemption ("All")
 * Displays:
@@ -28,7 +28,7 @@ A second Google Form always displays the **oldest available gift card**. When a 
 
 ```text
         Form 1
-  (Gift Card Upload)
+  (voucher Upload)
           │
           ▼
  Google Drive (images)
@@ -46,7 +46,7 @@ A second Google Form always displays the **oldest available gift card**. When a 
           │
           ▼
         Form 2
-   (Gift Card Redemption)
+   (voucher Redemption)
 ```
 
 ---
@@ -76,7 +76,7 @@ These values can be changed in the `CONFIG` object.
 
 Purpose:
 
-* Upload a gift card screenshot.
+* Upload a voucher screenshot.
 
 Requirements:
 
@@ -94,13 +94,13 @@ When submitted:
 
 Purpose:
 
-Redeem the oldest available gift card.
+Redeem the oldest available voucher.
 
 Contains:
 
 ### Image Item
 
-Displays the oldest active gift card.
+Displays the oldest active voucher.
 
 ### Multiple Choice Question
 
@@ -275,7 +275,7 @@ This acts as a backup refresh.
 
 ## Workflow
 
-1. User uploads a gift card.
+1. User uploads a voucher.
 2. Script initializes remaining value to `$40`.
 3. Form 2 updates to display the oldest available card.
 4. User redeems part or all of the card.
